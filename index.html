@@ -1,74 +1,106 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>DUEonq — Privacy Policy</title>
-<style>
-:root{--bg:#F7FAFF;--ink:#0B2447;--muted:#5E6E8A;--card:#fff;--accent:#002452;--border:#E3EAF5}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0B1322;--ink:#EAF0FF;--muted:#9BA9C6;--card:#151B2D;--accent:#EABE30;--border:#26324F}}
-:root[data-theme="dark"]{--bg:#0B1322;--ink:#EAF0FF;--muted:#9BA9C6;--card:#151B2D;--accent:#EABE30;--border:#26324F}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--ink)}
-body{font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;padding:env(safe-area-inset-top,0) 16px env(safe-area-inset-bottom,0)}
-main{max-width:680px;margin:0 auto;padding:40px 0 60px}
-h1{font-size:26px;margin:0 0 4px;color:var(--accent)}
-.updated{color:var(--muted);font-size:14px;margin-bottom:28px}
-h2{font-size:17px;margin:30px 0 8px;color:var(--accent)}
-p,li{color:var(--ink)}
-ul{padding-left:20px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px 20px;margin:18px 0}
-.card p{margin:0}
-a{color:var(--accent)}
-footer{margin-top:36px;font-size:13px;color:var(--muted)}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DUEonq — Your D2L deadlines, sorted</title>
+<meta name="description" content="DUEonq pulls every assignment, quiz and announcement from your school's D2L / Brightspace site into one Chrome side panel. Works on any D2L campus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,560;9..144,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main>
-  <h1>DUEonq Privacy Policy</h1>
-  <div class="updated">Last updated: September 21, 2026</div>
 
-  <div class="card">
-    <p><strong>Summary:</strong> DUEonq has no server. It never sends your data anywhere. Everything it reads and stores stays on your own computer, inside your browser.</p>
+<nav class="top">
+  <div class="row">
+    <a class="brand" href="index.html"><span class="mark"></span>DUEonq</a>
+    <div class="links">
+      <a href="index.html" class="on">Home</a>
+      <a href="features.html">Features</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="faq.html">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+    <a class="btn btn-dark" href="#">Add to Chrome</a>
   </div>
+</nav>
 
-  <p>DUEonq is a Chrome extension that shows assignment and quiz due dates from a student's Brightspace/OnQ site (Queen's University's OnQ, or any other school running Brightspace/D2L) in a single side panel.</p>
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow-pill"><span class="dot"></span>Works on any D2L / Brightspace site</span>
+      <h1 class="hero-h">Stop finding<br>out at 11pm<br>what's due.</h1>
+      <p class="lead">DUEonq is the deadline app for D2L. It reads your school's D2L site — assignments, quizzes, new posts — and lays it all out in a side panel you can actually glance at.</p>
+      <div class="hero-cta">
+        <a class="btn btn-dark" href="#">Add to Chrome — it's free</a>
+        <a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noopener">View source on GitHub</a>
+      </div>
+      <p class="hero-note">Any school running D2L Brightspace works, whatever it's branded as on your campus.</p>
+    </div>
+    <div class="mock-wrap">
+      <div class="mock-glow"></div>
+      <div class="mock">
+        <div class="mock-top">
+          <div class="mock-brand"><span class="m"></span>DUEonq</div>
+          <div class="mock-dot">↻</div>
+        </div>
+        <div class="mock-hero">
+          <div class="h"><span>DUE TODAY</span><span>Thu, Oct 8</span></div>
+          <div class="mock-item">
+            <span class="c"></span>
+            <span class="t"><b>Problem Set 4</b><span>Applied Math · dropbox</span></span>
+            <span class="w">2 h</span>
+          </div>
+          <div class="mock-item">
+            <span class="c"></span>
+            <span class="t"><b>Reading quiz — Ch. 9</b><span>Intro Psych · quiz</span></span>
+            <span class="w">7 h</span>
+          </div>
+        </div>
+        <div class="mock-course"><span class="code">CHEM 112</span><span class="n">1 due · next Fri</span></div>
+        <div class="mock-course"><span class="code">ECON 221</span><span class="n">All clear ✓</span></div>
+        <div class="mock-course"><span class="code">ENGL 100</span><span class="n">2 due · this week</span></div>
+      </div>
+    </div>
+  </div>
+</header>
 
-  <h2>What DUEonq accesses, and why</h2>
-  <ul>
-    <li><strong>Your school's Brightspace/D2L site</strong> (the domain you enter, such as <code>onq.queensu.ca</code>). DUEonq calls that site's own API, using your existing logged-in session, to read your course list, assignment and quiz due dates, course content, and announcements — the same data you could see by clicking around the site yourself.</li>
-    <li><strong>A security cookie ("XSRF" token)</strong> on that same site. Brightspace requires this token on certain requests to confirm they come from a real logged-in session. DUEonq reads this token only to attach it to its own requests to your school's site. It is not a password, and DUEonq never reads or stores your login credentials.</li>
-    <li><strong>Your Brightspace user ID.</strong> DUEonq briefly looks up your own user ID from the site (via its <code>whoami</code> endpoint) so it can match grade and submission records to you rather than to other users in a shared course. This ID is used only in memory while the extension runs — it is not saved to storage or sent anywhere.</li>
-  </ul>
+<section class="strip">
+  <div class="wrap">
+    <p class="k">Point it at your own school</p>
+    <h2 style="color:var(--paper); font-size:clamp(22px,2.6vw,30px); max-width:20ch;">Any D2L campus works — this isn't built for just one school.</h2>
+    <div class="try" style="margin-top:24px;">
+      <input type="text" class="mono" placeholder="yourschool.brightspace.com" aria-label="Your school's D2L domain">
+      <button type="button">Connect</button>
+    </div>
+    <p class="sub">Type in your own school's D2L domain once. DUEonq only ever talks to that one site.</p>
+  </div>
+</section>
 
-  <h2>What DUEonq stores</h2>
-  <p>DUEonq uses Chrome's local storage, which lives only on your device:</p>
-  <ul>
-    <li>The school domain you entered</li>
-    <li>A cached copy of your courses, deadlines, and recent announcements, so the panel loads instantly</li>
-    <li>Which items you've marked as done</li>
-    <li>Your theme preference (light / dark / auto)</li>
-  </ul>
-  <p>None of this is synced to a server, backed up externally, or shared with anyone, including us. Uninstalling the extension deletes it.</p>
+<section>
+  <div class="wrap feat-head">
+    <h2>The deadline app, basically</h2>
+    <p>D2L scatters deadlines across dropboxes, quizzes, content pages and announcements. DUEonq pulls them into one place, so you don't have to go looking.</p>
+    <div class="hero-cta" style="margin-top:8px;">
+      <a class="btn btn-ghost" href="features.html">See all features →</a>
+      <a class="btn btn-ghost" href="how-it-works.html">How it works →</a>
+    </div>
+  </div>
+</section>
 
-  <h2>What DUEonq does not do</h2>
-  <ul>
-    <li>It does not collect or transmit your name, email, password, or any other personal information to us or to any third party.</li>
-    <li>It has no analytics, tracking, or advertising code.</li>
-    <li>It does not run remote or externally loaded code.</li>
-    <li>It cannot access any site other than the one Brightspace/D2L domain you explicitly connect it to.</li>
-  </ul>
+<div class="cta-block">
+  <h2>Your next deadline is already in there.</h2>
+  <p>Add DUEonq and see it before it sees you.</p>
+  <div class="hero-cta">
+    <a class="btn btn-amber" href="#">Add to Chrome — it's free</a>
+    <a class="btn btn-outline" href="https://github.com/" target="_blank" rel="noopener">View source</a>
+  </div>
+</div>
 
-  <h2>Third parties</h2>
-  <p>DUEonq shares data with no one. It only ever talks to the Brightspace/D2L domain you connect it to, which is operated by your own school, not by us.</p>
+<footer class="site">
+  <p>This is an independent, student-built project — not affiliated with or endorsed by D2L, Brightspace, or any school. · <a href="privacy.html">Privacy policy</a></p>
+</footer>
 
-  <h2>Changes to this policy</h2>
-  <p>If this policy changes, the "Last updated" date above will change too.</p>
-
-  <h2>Contact</h2>
-  <p>Questions about this policy or DUEonq's data practices can be sent to: <strong>diveshasenthil@gmail.com</strong></p>
-
-  <footer>DUEonq is an independent, unofficial project and is not affiliated with or endorsed by Queen's University, D2L, or Brightspace.</footer>
-</main>
 </body>
 </html>
